@@ -104,9 +104,9 @@ main {
 
 #tasks .task {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     background-color: var(--darkest);
-    /* padding: 1rem; */
+    padding: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -115,8 +115,8 @@ main {
 }
 
 .task .content {
-    /* flex: 1 1 1; */
-    width: 300px;
+    flex: 1 1 0%;
+    word-break: break-all;
 }
 
 .task .content .text {
@@ -127,9 +127,9 @@ main {
     transition: 0.4s;
 }
 
-/* .task .content .text:not(:read-only) {
+.task .content .text:not(:read-only) {
     color: var(--pink);
-} */
+}
 
 .task .actions {
     display: flex;
@@ -138,11 +138,11 @@ main {
 
 .task .actions button {
     cursor: pointer;
-    /* margin: 0 0.1rem; */
+    margin: 0 0.1rem;
     font-size: 1.125rem;
     font-weight: 700;
-    /* text-transform: uppercase;
-    transition: 0.4s; */
+    text-transform: uppercase;
+    transition: 0.4s;
 }
 
 .task .actions button:hover {
