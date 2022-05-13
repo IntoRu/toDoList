@@ -20,7 +20,6 @@ body {
     min-height: 100vh;
     color: #FFF;
     background-color: var(--dark);
-    min-width: 300px;
 }
 
 header {
@@ -31,15 +30,16 @@ header {
 }
 
 header h1 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 300;
     color: var(--grey);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #new-task-form {
     display: flex;
-    margin: 0 auto;
+    ;
 }
 
 input,
@@ -55,11 +55,9 @@ button {
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
-    margin-right: 0.3rem;
-
+    margin-right: 1rem;
     color: var(--light);
     font-size: 1.25rem;
-    width: 280px;
 }
 
 #new-task-input::placeholder {
@@ -70,8 +68,8 @@ button {
     color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
-    /* background-image: linear-gradient(to right, var(--pink), var(--purple)); */
-    /* -webkit-background-clip: text;
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     cursor: pointer;
     transition: 0.4s;
@@ -93,28 +91,32 @@ main {
 }
 
 .task-list {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .task-list h2 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--grey);
+    color: #e30c6e;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #tasks .task {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: var(--darkest);
-    padding: 1rem;
+    /* padding: 1rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    width: 300px;
 }
 
 .task .content {
-    flex: 1 1 0%;
+    /* flex: 1 1 1; */
+    width: 300px;
 }
 
 .task .content .text {
@@ -125,22 +127,22 @@ main {
     transition: 0.4s;
 }
 
-.task .content .text:not(:read-only) {
+/* .task .content .text:not(:read-only) {
     color: var(--pink);
-}
+} */
 
 .task .actions {
     display: flex;
-    margin: 0 -0.1rem;
+    /* margin: 0 -0.1rem; */
 }
 
 .task .actions button {
     cursor: pointer;
-    margin: 0 0.2rem;
+    /* margin: 0 0.1rem; */
     font-size: 1.125rem;
     font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.4s;
+    /* text-transform: uppercase;
+    transition: 0.4s; */
 }
 
 .task .actions button:hover {
@@ -152,8 +154,8 @@ main {
 }
 
 .task .actions .delPlus {
-    /* background-image: linear-gradient(to right, var(--pink), var(--purple)); */
-    /* -webkit-background-clip: text;
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     color: green;
 }
@@ -163,11 +165,6 @@ main {
 }
 
 .txt {
-    color: rgb(206, 72, 19);
-}
-
-.container {
-    width: 300px;
-    margin: 0px auto;
-    padding: 0px 15px;
+    color: rgb(162, 162, 230);
+    font-size: 12px;
 }
