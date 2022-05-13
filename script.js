@@ -1,5 +1,5 @@
-import { addToDo, dellTodo, render, renderResult } from './function.js'
-import { div, inp, btn } from './root.js'
+import { addToDo, dellTodo, render } from './function.js'
+import { inp, btn } from './root.js'
 
 let count = localStorage.getItem('count') // счётчик
 
@@ -20,13 +20,13 @@ div.addEventListener('click', (e) => {
         dellTodo(id)
         render()
         localStorage.setItem('count', --count) // уменьшаем счётчик
-        renderResult()
+        // renderResult()
     }
     else if (e.target.classList == 'addBtn') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
         localStorage.setItem('count', ++count) // увеличиваем счётчик
-        renderResult()
+        // renderResult()
     }
     else {
         return
@@ -35,7 +35,7 @@ div.addEventListener('click', (e) => {
 
 // рендерим актуальный список
 render()
-renderResult()
+// renderResult()
 
 export { count }
 

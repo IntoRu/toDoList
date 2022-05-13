@@ -1,4 +1,4 @@
-import { div, divShow } from './root.js'
+import { } from './root.js'
 import { addStor, dellStor } from './locStor.js'
 import { count } from './script.js'
 
@@ -46,19 +46,19 @@ function render() {
 }
 
 // функция отрисовки результата
-function renderResult() {
-    if (count <= 3) {
-        divShow.innerHTML = 'ты лох'
-    }
-    else if (count > 3 && count <= 6) {
-        divShow.innerHTML = 'ты так себе'
-    }
-    else if (count > 6 && count <= 9) {
-        divShow.innerHTML = 'уже лучше'
-    }
-    else if (count > 9) {
-        divShow.innerHTML = 'ты крут'
-    }
-}
+// function renderResult() {
+//     if (count <= 3) {
+//         divShow.innerHTML = 'ты лох'
+//     }
+//     else if (count > 3 && count <= 6) {
+//         divShow.innerHTML = 'ты так себе'
+//     }
+//     else if (count > 6 && count <= 9) {
+//         divShow.innerHTML = 'уже лучше'
+//     }
+//     else if (count > 9) {
+//         divShow.innerHTML = 'ты крут'
+//     }
+// }
 
-export { addToDo, dellTodo, render, toDoList, renderResult }
+export { addToDo, dellTodo, render, toDoList }
