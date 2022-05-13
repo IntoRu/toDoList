@@ -47,6 +47,9 @@ div.addEventListener('click', (e) => {
     }
 })
 
+// рендерим актуальный список
+render()
+
 
 
 

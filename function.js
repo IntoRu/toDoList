@@ -1,6 +1,7 @@
 import { div } from './root.js'
+import { addStor } from './locStor.js'
 
-let toDoList = [] // массив где будут храниться дела
+let toDoList = JSON.parse(localStorage.getItem('list')) || [] // массив где будут храниться дела
 
 // функция добавления дела
 function addToDo(text) {
@@ -10,6 +11,7 @@ function addToDo(text) {
         id: `${Math.random()}`
     }
     toDoList.push(todo)
+    addStor() //вызываем функцию добавления списка в локальное хранилище
 }
 
 // функция удаления дела через изменения булевого значения
@@ -36,4 +38,4 @@ function render() {
     div.innerHTML = html
 }
 
-export { addToDo, dellTodo, render }
+export { addToDo, dellTodo, render, toDoList }
