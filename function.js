@@ -36,7 +36,7 @@ function render() {
         if (element.done) { // если дело выполненно
             return// то не отрисовываем
         }
-        html += `<div>${element.text}
+        html += `<div>${element.text} --- ${new Date().toDateString()}
         <button class = 'addBtn' data-id = '${element.id}'>Complited</button>
         <button class = 'dellBtn'  data-id = '${element.id}'>No Complited</button>
         </div>`
