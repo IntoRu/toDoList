@@ -1,7 +1,7 @@
-import { addToDo, dellTodo, render, toDoList } from './function.js'
+import { addToDo, dellTodo, render } from './function.js'
 import { div, inp, btn, divShow } from './root.js'
 
-let count = 0 // счётчик
+let count = 0
 
 // кнопка добавлени
 btn.addEventListener('click', () => {
@@ -49,3 +49,4 @@ div.addEventListener('click', (e) => {
 
 // рендерим актуальный список
 render()
+
