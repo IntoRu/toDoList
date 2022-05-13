@@ -5,9 +5,8 @@ const btn = document.getElementById('new-task-submit')
 // поле отображение дел
 let div = document.getElementById('tasks')
 
-// див для сётчика
-// let divShow = document.createElement('div')
-// divShow.classList.add('show')
-// btn.insertAdjacentElement('afterend', divShow)
+// отображение счётчика сётчика
+let divShow = document.querySelector('h2')
 
-export { inp, btn, div }
+
+export { inp, btn, div, divShow }
