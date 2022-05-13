@@ -1,5 +1,6 @@
-import { div } from './root.js'
+import { div, divShow } from './root.js'
 import { addStor, dellStor } from './locStor.js'
+import { count } from './script.js'
 
 let toDoList = JSON.parse(localStorage.getItem('list')) || [] // массив где будут храниться дела
 
@@ -43,4 +44,20 @@ function render() {
     div.innerHTML = html
 }
 
-export { addToDo, dellTodo, render, toDoList }
+// функция отрисовки результата
+function renderResult() {
+    if (count <= 3) {
+        divShow.innerHTML = 'ты лох'
+    }
+    else if (count > 3 && count <= 6) {
+        divShow.innerHTML = 'ты так себе'
+    }
+    else if (count > 6 && count <= 9) {
+        divShow.innerHTML = 'уже лучше'
+    }
+    else if (count > 9) {
+        divShow.innerHTML = 'ты крут'
+    }
+}
+
+export { addToDo, dellTodo, render, toDoList, renderResult }
