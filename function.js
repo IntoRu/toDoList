@@ -19,8 +19,12 @@ function dellTodo(id) {
     toDoList.forEach(el => {
         if (el.id === id) {
             el.done = true
-            // пересохраняем в массиве что бы потом отмеченные не рендерелись на страницу
-            return localStorage.setItem('list', JSON.stringify(toDoList))
+            // удаляем из локалки
+            if (el.done) { // если дело выполненно
+                let find = toDoList.findIndex(el => el.done) // находим индекс сделанного дела
+                toDoList.splice(find, 1) // удаляем элемент по индексу
+                localStorage.setItem('list', JSON.stringify(toDoList)) // пересохраняем массив в хранилище  
+            }
         }
     })
 }

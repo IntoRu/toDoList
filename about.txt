@@ -1,4 +1,6 @@
 https://www.youtube.com/watch?v=CqA_Tw_5Q-o&list=PLfUV7TeuizTig_4dtEYa2WrWsogUhgMV5&index=26&t=48s -
 основа проекта
 
-https://www.youtube.com/watch?v=434L4VCWT7U&t=1511s - по local storage
+https://www.youtube.com/watch?v=ujrQ2cDSSRg&list=PL7cTIfGFrdKn9lnGXEUWEXYdYp-HKGPAw&index=6 - по local storage
+не удаляем из локального хранилища на прямую.
+пробуем удалить из массива и перезаписать локальное хранилище
