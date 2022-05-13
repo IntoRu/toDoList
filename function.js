@@ -1,5 +1,5 @@
 import { div } from './root.js'
-import { addStor } from './locStor.js'
+import { addStor, dellStor } from './locStor.js'
 
 let toDoList = JSON.parse(localStorage.getItem('list')) || [] // массив где будут храниться дела
 
@@ -21,9 +21,7 @@ function dellTodo(id) {
             el.done = true
             // удаляем из локалки
             if (el.done) { // если дело выполненно
-                let find = toDoList.findIndex(el => el.done) // находим индекс сделанного дела
-                toDoList.splice(find, 1) // удаляем элемент по индексу
-                localStorage.setItem('list', JSON.stringify(toDoList)) // пересохраняем массив в хранилище  
+                dellStor() // удаляем его из хранилища
             }
         }
     })
