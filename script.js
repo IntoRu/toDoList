@@ -1,10 +1,11 @@
 import { addToDo, dellTodo, render } from './function.js'
-import { inp, btn } from './root.js'
+import { div, inp, btn } from './root.js'
 
 let count = localStorage.getItem('count') // счётчик
 
 // кнопка добавлени
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+    e.preventDefault() // что бы страница не дёргалась
     let txt = inp.value
     if (inp.value) {
         addToDo(txt)
@@ -15,14 +16,15 @@ btn.addEventListener('click', () => {
 
 //слушаем весь див
 div.addEventListener('click', (e) => {
+    // e.preventDefault()
     const id = e.target.dataset.id
-    if (e.target.classList == 'dellBtn') { //если нажата кнопка --не выполненно--
+    if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
         localStorage.setItem('count', --count) // уменьшаем счётчик
         // renderResult()
     }
-    else if (e.target.classList == 'addBtn') { // если нажата кнопка --выполненно--
+    else if (e.target.classList == 'delPlus') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
         localStorage.setItem('count', ++count) // увеличиваем счётчик

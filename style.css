@@ -147,12 +147,16 @@ main {
     opacity: 0.6;
 }
 
-.task .actions .edit {
+.task .actions .delPlus {
     background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.task .actions .delete {
+.task .actions .delMinus {
     color: crimson;
+}
+
+.txt {
+    color: rgb(162, 162, 230);
 }

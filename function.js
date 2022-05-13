@@ -1,4 +1,4 @@
-import { } from './root.js'
+import { div } from './root.js'
 import { addStor, dellStor } from './locStor.js'
 import { count } from './script.js'
 
@@ -36,11 +36,20 @@ function render() {
         if (element.done) { // если дело выполненно
             return// то не отрисовываем
         }
-        // в противном случае (дело не вуполненно done == fallse) мы рендерим
-        html += `<div>${element.text} --- ${new Date().toDateString()}
-        <button class = 'addBtn' data-id = '${element.id}'>Complited</button>
-        <button class = 'dellBtn'  data-id = '${element.id}'>No Complited</button>
-        </div>`
+        html +=
+            `
+        <div class="task">
+					<div class="content">
+                        ${element.text}
+                        <div class = 'txt'>${new Date().toDateString()}</div> 
+					</div>
+					<div class="actions">
+						<button class="delPlus" data-id = '${element.id}'>OK</button>
+						<button class="delMinus" data-id = '${element.id}'>NG</button>
+					</div>
+				</div>
+            
+        `
     })
     div.innerHTML = html
 }
