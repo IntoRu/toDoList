@@ -29,7 +29,7 @@ div.addEventListener('click', (e) => {
     else {
         return
     }
-    localStorage.setItem('count', count)
+
 
     // усовия счётчика
     // if (count <= 3) {
