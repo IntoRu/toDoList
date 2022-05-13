@@ -12,4 +12,5 @@ function dellStor() {
     localStorage.setItem('list', JSON.stringify(toDoList)) // пересохраняем массив в хранилище 
 }
 
+
 export { addStor, dellStor }

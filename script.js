@@ -1,7 +1,7 @@
 import { addToDo, dellTodo, render } from './function.js'
 import { div, inp, btn, divShow } from './root.js'
 
-let count = 0
+let count = localStorage.getItem('count')
 
 // кнопка добавлени
 btn.addEventListener('click', () => {
@@ -19,34 +19,34 @@ div.addEventListener('click', (e) => {
     if (e.target.classList == 'dellBtn') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
-        count -= 1
-        console.log(count)
+        localStorage.setItem('count', --count) // уменьшаем счётчик
     }
     else if (e.target.classList == 'addBtn') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
-        count += 1
-        console.log(count)
+        localStorage.setItem('count', ++count) // увеличиваем счётчик
     }
     else {
         return
     }
+    localStorage.setItem('count', count)
 
     // усовия счётчика
-    if (count <= 3) {
-        divShow.innerHTML = 'ты лох'
-    }
-    else if (count > 3 && count <= 6) {
-        divShow.innerHTML = 'ты так себе'
-    }
-    else if (count > 6 && count <= 9) {
-        divShow.innerHTML = 'уже лучше'
-    }
-    else if (count > 9) {
-        divShow.innerHTML = 'ты крут'
-    }
+    // if (count <= 3) {
+    //     divShow.innerHTML = 'ты лох'
+    // }
+    // else if (count > 3 && count <= 6) {
+    //     divShow.innerHTML = 'ты так себе'
+    // }
+    // else if (count > 6 && count <= 9) {
+    //     divShow.innerHTML = 'уже лучше'
+    // }
+    // else if (count > 9) {
+    //     divShow.innerHTML = 'ты крут'
+    // }
 })
 
 // рендерим актуальный список
 render()
+
 

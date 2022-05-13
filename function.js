@@ -23,6 +23,7 @@ function dellTodo(id) {
             if (el.done) { // если дело выполненно
                 dellStor() // удаляем его из хранилища
             }
+
         }
     })
 }
