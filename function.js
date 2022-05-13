@@ -19,6 +19,8 @@ function dellTodo(id) {
     toDoList.forEach(el => {
         if (el.id === id) {
             el.done = true
+            // пересохраняем в массиве что бы потом отмеченные не рендерелись на страницу
+            return localStorage.setItem('list', JSON.stringify(toDoList))
         }
     })
 }
