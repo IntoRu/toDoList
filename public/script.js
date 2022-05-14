@@ -21,13 +21,13 @@ div.addEventListener('click', (e) => {
     if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
-        localStorage.setItem('count', count -= 3) // уменьшаем счётчик
+        localStorage.setItem('count', --count) // уменьшаем счётчик
         renderResult()
     }
     else if (e.target.classList == 'delPlus') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
-        localStorage.setItem('count', count += 1) // увеличиваем счётчик
+        localStorage.setItem('count', ++count) // увеличиваем счётчик
         renderResult()
     }
     else {
