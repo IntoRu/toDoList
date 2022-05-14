@@ -1,5 +1,6 @@
-import { addToDo, dellTodo, render, renderResult } from './function.js'
+import { addToDo, dellTodo, render } from './function.js'
 import { div, inp, btn } from './root.js'
+import { renderResult } from './progress.js'
 
 let count = localStorage.getItem('count') || 0 // счётчик
 
