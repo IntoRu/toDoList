@@ -1,7 +1,7 @@
 import { addToDo, dellTodo, render, renderResult } from './function.js'
 import { div, inp, btn } from './root.js'
 
-let count = localStorage.getItem('count') // счётчик
+let count = localStorage.getItem('count') || 0 // счётчик
 
 // кнопка добавлени
 btn.addEventListener('click', (e) => {
@@ -21,13 +21,13 @@ div.addEventListener('click', (e) => {
     if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
-        localStorage.setItem('count', --count) // уменьшаем счётчик
+        localStorage.setItem('count', count -= 3) // уменьшаем счётчик
         renderResult()
     }
     else if (e.target.classList == 'delPlus') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
-        localStorage.setItem('count', ++count) // увеличиваем счётчик
+        localStorage.setItem('count', count += 1) // увеличиваем счётчик
         renderResult()
     }
     else {
