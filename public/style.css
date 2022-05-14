@@ -30,10 +30,11 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     color: var(--grey);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #new-task-form {
@@ -67,9 +68,9 @@ button {
     color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     cursor: pointer;
     transition: 0.4s;
 }
@@ -90,27 +91,31 @@ main {
 }
 
 .task-list {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .task-list h2 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--grey);
+    color: #e30c6e;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #tasks .task {
     display: flex;
     justify-content: space-between;
     background-color: var(--darkest);
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
 .task .content {
     flex: 1 1 0%;
+    word-break: break-all;
 }
 
 .task .content .text {
@@ -127,12 +132,12 @@ main {
 
 .task .actions {
     display: flex;
-    margin: 0 -0.5rem;
+    /* margin: 0 -0.1rem; */
 }
 
 .task .actions button {
     cursor: pointer;
-    margin: 0 0.5rem;
+    /* margin: 0 0.1rem; */
     font-size: 1.125rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -148,9 +153,10 @@ main {
 }
 
 .task .actions .delPlus {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: green;
 }
 
 .task .actions .delMinus {
@@ -159,4 +165,5 @@ main {
 
 .txt {
     color: rgb(162, 162, 230);
+    font-size: 12px;
 }

@@ -10,22 +10,22 @@
 </head>
 
 <body>
+    <div class='container'>
+        <header>
+            <h1>Task List 2022</h1>
+            <form id="new-task-form">
+                <input type="text" name="new-task-input" id="new-task-input" placeholder="What do you have ?" />
+                <input type="submit" id="new-task-submit" value="Add" />
+            </form>
+        </header>
 
-    <header>
-        <h1>Task List 2022</h1>
-        <form id="new-task-form">
-            <input type="text" name="new-task-input" id="new-task-input" placeholder="What do you have planned?" />
-            <input type="submit" id="new-task-submit" value="Add task" />
-        </form>
-    </header>
+        <main>
+            <section class="task-list">
+                <h2></h2>
 
-    <main>
-        <section class="task-list">
-            <h2></h2>
+                <div id="tasks">
 
-            <div id="tasks">
-
-                <!-- <div class="task">
+                    <!-- <div class="task">
 					<div class="content">
 						<input 
 							type="text" 
@@ -39,10 +39,10 @@
 					</div>
 				</div> -->
 
-            </div>
-        </section>
-    </main>
-
+                </div>
+            </section>
+        </main>
+    </div>
 
 
     <script type="module" src="./script.js"></script>
