@@ -23,7 +23,7 @@ body {
 }
 
 header {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
@@ -95,7 +95,7 @@ main {
 }
 
 .task-list h2 {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     font-weight: 300;
     color: #e30c6e;
     margin-bottom: 1rem;
