@@ -20,6 +20,9 @@ div.addEventListener('click', (e) => {
     if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
+        // я не знаю как по другому поэтому так (уменьшаем на 3)
+        localStorage.setItem('count', --count) // уменьшаем счётчик
+        localStorage.setItem('count', --count) // уменьшаем счётчик
         localStorage.setItem('count', --count) // уменьшаем счётчик
         renderResult()
     }
