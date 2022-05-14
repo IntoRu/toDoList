@@ -16,7 +16,6 @@ btn.addEventListener('click', (e) => {
 
 //слушаем весь див
 div.addEventListener('click', (e) => {
-    // e.preventDefault()
     const id = e.target.dataset.id
     if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
