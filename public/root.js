@@ -6,7 +6,8 @@ const btn = document.getElementById('new-task-submit')
 let div = document.getElementById('tasks')
 
 // отображение счётчика сётчика
-let divShow = document.querySelector('h2')
+let divShow = document.querySelector('.progress')
+
 
 
 export { inp, btn, div, divShow }

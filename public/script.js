@@ -4,6 +4,10 @@ import { renderResult } from './progress.js'
 
 let count = localStorage.getItem('count') || 0 // счётчик
 
+// cсчётчик сделанных и не сделанных дел
+let dealPlus = localStorage.getItem('dealPlus') || 0
+let dealMinus = localStorage.getItem('dealMinus') || 0
+
 // кнопка добавлени
 btn.addEventListener('click', (e) => {
     e.preventDefault() // что бы страница не дёргалась
@@ -21,6 +25,7 @@ div.addEventListener('click', (e) => {
     if (e.target.classList == 'delMinus') { //если нажата кнопка --не выполненно--
         dellTodo(id)
         render()
+        localStorage.setItem('dealMinus', ++dealMinus) // прибавляем не сделанное дело
         // я не знаю как по другому поэтому так (уменьшаем на 3)
         localStorage.setItem('count', --count) // уменьшаем счётчик
         localStorage.setItem('count', --count) // уменьшаем счётчик
@@ -30,6 +35,7 @@ div.addEventListener('click', (e) => {
     else if (e.target.classList == 'delPlus') { // если нажата кнопка --выполненно--
         dellTodo(id)
         render()
+        localStorage.setItem('dealPlus', ++dealPlus) // прибавляем сделанное дело
         localStorage.setItem('count', ++count) // увеличиваем счётчик
         renderResult()
     }
@@ -42,5 +48,5 @@ div.addEventListener('click', (e) => {
 render()
 renderResult()
 
-export { count }
+export { count, dealMinus, dealPlus }
 
